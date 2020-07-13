@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="status"></div>
+    <button id="choujiang">测试</button>
+    <script>
+        let choujiang = document.getElementById('choujiang')
+        let status = document.getElementById('status')
+        class Farter {
+            constructor(uname, age){
+                this.uname = uname;
+                this.age = age;
+                this.btn = choujiang;
+                this.btn.onclick = this.say
+            }
+            say = () => {
+                console.log(this.uname, '今年', this.age, '岁')
+                console.log(this)
+            }
+        }
+        let farter = new Farter('liudehua',4)
+    
+        var name = 'windows'
+        var ls = {
+            name: 'zhelishi ls',
+            say: () => {
+                console.log(this.name)
+            }
+        }
+        ls.say()
+
+        let Gouzao = function(name) {
+            this.name = name;
+            this.say = () => {
+                console.log(this.name)
+            }
+        }
+        let gouzao = new Gouzao('xiaogouzao')
+        gouzao.say()
+    </script>
+</body>
+</html>
